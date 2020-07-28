@@ -1,0 +1,537 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+li {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+}
+.cf::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+img {
+    display:block;
+}
+.header {
+    width:100%;
+    height: 140px;
+    background: white;
+    margin-bottom: 30px;
+}
+.nav {
+    padding: 10px 0px;
+    background: #f7f6f6;
+}
+.navleft {
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.navbotoom {
+    position: relative;
+}
+.tologo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 213px;
+    height: 90px;
+    /* margin-top: 25px; */
+    background: url(../img/logo.png)no-repeat 0 0;
+}
+.search {
+    margin: 25px auto;
+    width: 100%;
+    line-height: 50px;
+    padding: 0 250px 0 280px;
+}
+.sos {
+    position: relative;
+}
+.sos span {
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    background: red;
+    line-height: 36px;
+    padding: 0px 20px;
+    color: white;
+    cursor: pointer;
+}
+.sos input{
+    line-height: 34px;
+    width: 100%;
+    outline:none;
+    border: none;
+    border: 1px solid red;
+    text-indent: 20px;
+}
+.gouwc {
+    position: absolute;
+    text-align: center;
+    right: 50px;
+    top: 7px;
+}
+.gouwc a {
+    border: 1px solid red;
+    color: black;
+    padding: 7px 10px;
+}
+.gouwc a:hover{
+    color: red;
+    text-decoration: none;
+}
+.sul {
+    margin-top: 5px;
+}
+.sul>li {
+    float: left;
+    line-height: 10px;
+    padding: 0 5px;
+}
+.sul>li a:hover {
+    text-decoration: none;
+    color: red;
+}
+.img{
+    height: 100px;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+}
+.dezone {
+    padding-left: 10px;
+}
+.cloumn input{
+    width: 500px;
+    outline: none;
+    text-indent: 10px;
+    line-height: 35px;
+    border: 1px solid red;
+}
+.cloumn img {
+    width: 150px;
+    height: 100px;
+    float:right;
+}
+.ul>li {
+    float: left;
+    font-size: 14px;
+    padding: 5px;
+    color: #737373;
+    cursor: pointer;
+}
+.ul>li:hover {
+    color: red;
+}
+.shopcar {
+    border: red 1px solid;
+    padding:9px;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    color:black;
+}
+.shopcar:hover {
+    color: red;
+    text-decoration: none;
+}
+.heatop {
+    position: relative;
+    padding-top: 20px;
+}
+.clnav>li {
+    padding: 5px 0px;
+}
+.clnav>li:hover {
+    background: #d9d9d9;
+}
+.clnav>li a{
+    color: black;
+    font-size: 14px;
+}
+.clnav>li a:hover {
+    color: red;
+    text-decoration: none;
+}
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+.content_left {
+    width: 200px;
+}
+.content_center {
+    width: 812px;
+    position: relative;
+    overflow: hidden;
+    white-space:wrap;
+    height: 497px;
+    margin: auto;
+}
+.lubhead {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 6000px;
+}
+.imglunbo {
+    width: 812px;
+    height: 457px;
+    /* margin-right: 20px; */
+}
+.picture {
+    display: block;
+}
+.post_img {
+    display: block;
+    float: left;
+}
+.post_img img {
+    width: 50px;
+    height: 50px;
+}
+.cnavone {
+    float: left;
+    margin-left: 10px;
+    line-height: 27px;
+}
+.hyn {
+    color: black;
+}
+.hyn:hover {
+    color: red;
+    text-decoration: none;
+}
+.post a{
+    color: black;
+}
+.post a:hover {
+    color: red;
+    text-decoration: none;
+}
+.content {
+    border-top: 1px solid #ddd;
+}
+.postpass {
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(253, 252, 252, 0.9);
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background: rgba(225, 225, 225, 0.2);
+}
+.postpass img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 10px 0;
+}
+.postpass input{
+    margin: auto;
+    display: block;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-indent: 10px;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    border: 1px solid red;
+}
+.postpass a {
+    display: block;
+    padding: 9px;
+    background:red;
+    color: black;
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 35px auto;
+    text-decoration: none;
+}
+.postpass a:hover {
+    color: white;
+    text-decoration: none;
+}
+.lunbo {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+}
+.lunbo a{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(225, 225,225, 0.7);
+}
+.lunbo a:hover {
+    background-color:white;
+}
+.lunbo>li {
+    color: red;
+    padding-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+.host {
+    margin: 20px auto;
+    height: 62px;
+    line-height: 62px;
+    background-image: url(../img/rxbk.png);
+    /* margin: 0px 0px 20px; */
+    padding: 0px;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+.hul {
+    margin-bottom: 20px;
+}
+.hul>li {
+    float: left;
+    padding: 20px;
+    background:white;
+    transition: all 0.5s;
+}
+.hul .li {
+    /* padding-right: 61px; */
+}
+.hul>li:hover {
+    background: red;
+}
+.hul>li a {
+    font-size: 14px;
+    color: black;
+}
+.hul>li:hover a {
+    color: white;
+    text-decoration: none;
+}
+.toop {
+    margin-top: 40px;
+}
+.wimg img{
+    width: 100%;
+    width: 100%;
+}
+.herd {
+    height: 280px;
+    margin-bottom: 60px;
+}
+.ttr {
+    color: red;
+}
+.wman {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-radius: 0;
+}
+.fukuan {
+    margin-top: 10px;
+} 
+.fukuan p,a{
+    display: block;
+    color:rgb(133, 129, 129);
+    font-size: 14px;
+}
+.fukuan a:hover {
+    color: red;
+    text-decoration: none;
+}
+.xqone {
+    margin-top: 30px;
+}
+.xqindex {
+    width: 100%;
+    height: 50px;
+    background-color:red;
+}
+.xqindex a {
+    line-height: 50px;
+    margin-left: 100px;
+    font-size: 18px;
+    color: white;
+}
+.xqindex a:hover {
+    text-decoration: none;
+
+}
+.xtul>li {
+    float: left;
+    margin-right: 20px;
+}
+.xtul>li img {
+    width: 50px;
+    height: 50px;
+}
+.xtu a {
+   display: inline-block;
+   margin-top: 10px;
+   color: black;
+}
+.xtu a:hover {
+    color: red;
+    text-decoration: none;
+}
+.xright {
+    width: 500px;
+}
+.xrjg {
+    width: 500px;
+    background: #FFF2E8;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.pone {
+    line-height: 50px;
+    display: block;
+}
+.pone span {
+    color: #f40;
+    font-size: 24px;
+    padding-left: 10px;
+    line-height: 50px;
+}
+.ptwo {
+    line-height: 50px;
+    display: block;
+}
+.cmd span {
+    padding: 5px;
+    border: 1px solid black;
+    margin-left: 10px;
+    transition: all 0.5s;cursor: pointer;} 
+.cmd span:hover {
+    border-color:red;
+}
+.sp {
+    display: inline-block;
+}
+.sp img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 20px;
+    transform: translate(0px,20px);
+}
+.buy {
+    margin-top: 40px;
+}
+.buy a {
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+    background: red;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.buy a:hover {
+    text-decoration: none;
+}
+.buyone .aone {
+    background: black;
+    margin-left: 40px;
+}
+.buyone {
+    width: 300px;
+    margin: auto;
+}
+.buyone>li {
+    margin-left: 10px;
+}
+#submit {
+    text-align: center;
+}
+.infoTextarea::-webkit-input-placeholder {
+    /* color: red; */
+ }
+ .dibu {
+    height: 100px;
+    background: black;
+    text-align: center;
+ }
+ .dibu ul { 
+    display: flex;
+    
+    justify-content: space-around;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+ }
+ .dibu ul>li {
+    float: left;
+    padding: 5px;
+    color: rgb(156, 151, 151);
+ }
+ .dibu ul>li a:hover {
+     color: white;
+     text-decoration: none;
+ }
+ .dibu p {
+     padding-bottom: 5px;
+     margin-bottom: 0px;
+ }
+@media screen and (max-width: 1200px ) and (min-width:500px)  {
+
+   .header {
+       width: 80%;
+   }
+   .img {
+       width: 20%;
+   }
+   .cloumn {
+       width: 50%;
+   }
+   .cloumn input{
+    width: 80%;
+    /* display:inline-block; */
+}
+   .center {
+       width: 100%;
+   }
+   .shopcar {
+    width: 20%;
+    display:inline-block;
+    border: red 1px solid;
+    padding: 9px;
+    padding-bottom: 10px;
+    color: black;
+    }
+    .ul {
+        width: 100%;
+        font-size: 12px;
+    }
+    .lu>li a {
+        color: black;
+        padding: 0 5px;
+        font-size: 14px;
+    }
+    .ul>li {
+        float: left;
+        font-size: 12px;
+        padding: 5px;
+        color: #737373;
+        cursor: pointer;
+    }
+    .lu {
+        width: 100%;
+        font-size: 14px;
+    }
+   .dez {
+       width: 30%;
+    }
+    .dez img {
+        /* width: 50%; */
+        /* height:50%; */
+    }
+}
+    

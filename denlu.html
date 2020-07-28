@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>denlu</title>
+    <script src="./js/jQuery.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/E-coomerce.css">
+</head>
+
+<body>
+    <div class="postpass">
+        <img src="./img/logo.jpg" alt="">
+        <input type="text" placeholder="用户名" id="username">
+        <input type="password" placeholder="用户密码" id="password">
+        <span id="submit" style="width: 60px;margin: auto;display: block;background:linear-gradient(to right,#E9517C,blue);text-align: center;color: white;">登录</span>
+    </div>
+
+    <script>
+        var post = $("#submit");
+        // console.log(post);
+        post.click(function () {
+                $.ajax({
+                    type: "post",
+                    data: {
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                    },
+                    url: "http://192.168.1.103:3000/users/login",
+                    success: function (data) {
+                        localStorage.setItem("token",data.token);
+                        //  var result=localStorage.getItem("token",data);
+                        //  console.log(result);
+                        if(data.state==0) {
+                            $.ajax({   
+                                type:"get",
+                                url:"http://192.168.1.103:3000/users/userinfo",
+                                data:{
+                                    username:$("#username").val(),
+                                    token:data.token
+                                },
+                                success:function (info){
+                                var infos = JSON.stringify(info.userinfo);
+                                console.log(infos);
+                                localStorage.setItem("information",infos);
+                                location.href="E-commerce.html";
+                                }
+                            })
+                        }else{
+                            console.log("不存在");
+                        }
+                    }
+                })
+        })
+        // var callback = { "username": "huwei", "password": "9527" };
+        // //  console.log(callback)
+        // $.post("http://192.168.1.103:3000/users/register", callback, function (data) {
+        //     console.log(data);
+        // }, "json");
+    </script>
+    <!-- <script>
+        var ar = function () {
+            $.ajax({
+                type: "post",
+                data: {
+                    username: "huwei",
+                    password: "9527",
+                    phone: "13369112949",
+                    userID: "hw",
+                    email: "1457328087@qq.com"
+                },
+                url: "http://192.168.1.122:3000/users/register",
+                success: function (data) {
+                    console.log(data);
+                }
+            })
+        }
+        
+    </script> -->
+    <!-- <canvas id="canvas">
+        
+    </canvas> -->
+    <script src="./js/index.js"></script>
+</body>
+    
+</html>

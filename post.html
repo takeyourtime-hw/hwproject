@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+    <script src="./js/jQuery.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/E-coomerce.css">
+</head>
+
+<body >
+    <div class="header container">
+        <div class="nav">
+            <div class="navleft pull-left">
+                <span class="index">亲，请登录</span>
+                <span id="register">免费注册</span>
+            </div>
+            <div class="navright pull-right">
+                <ul class="ul">
+                    <li><a href="">女装首页</a></li>
+                    <li><a href="">我的淘宝</a></li>
+                    <li><a href="">购物车</a></li>
+                    <li><a href="">收藏夹</a></li>
+                    <li><a href="">服装分类</a></li>
+                    <li><a href="">卖家中心</a></li>
+                    <li><a href="">联系客服</a></li>
+                    <li><a href="">网站导航</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbotoom">
+            <div class="tologo"></div>
+            <div class="search">
+                <div class="sos">
+                    <input type="text" placeholder="女装"><span>搜索</span>
+                </div>
+                <ul class="sul">
+                    <li><a href="">短袖</a></li>
+                    <li><a href="">长袖</a></li>
+                    <li><a href="">短裙</a></li>
+                    <li><a href="">短裤</a></li>
+                    <li><a href="">超短裙</a></li>
+                    <li><a href="">连衣裙</a></li>
+                    <li><a href="">抹胸裙</a></li>
+                </ul>
+            </div>
+            <div class="gouwc">
+                <a href="">我的购物车</a>
+            </div>
+        </div>
+    </div>
+    <div class="postpass" style="background-image: url(./img/logo.jpg);border: 1px solid red;border-radius: 5px;background-repeat: no-repeat;background-size: 100%,100%;">
+        <img src="./img/logo.jpg" alt="">
+        <input class="infoTextarea" id="terge" type="text" placeholder="用户名">
+        <input class="infoTextarea" id="password" type="password" placeholder="用户密码" >
+        <input class="infoTextarea" id="phone" type="text" placeholder="电话号码">
+        <input class="infoTextarea" id="ID" type="text" placeholder="身份证号码">
+        <input class="infoTextarea" id="email" type="text" placeholder="email">
+        <span id="submit">立即注册</span>
+    </div>
+    <script>
+        var post = $("#submit");
+        $("#terge").blur(function() {
+            var zNeg = /^[1][3,4,5,7,8][0-9]{9}$/;
+            console.log(zNeg)
+            if($(this).val() == "") {
+                $(this).attr('placeholder','用户名不能为空!');
+                $("#terge::-webkit-input-placeholder").css({"color":"blue"})
+                // $('.infoTextarea').addClass('infoTextarea');
+                // $('.infoTextarea').next().css({"color":"red"})
+				// $(this).addClass("error");
+				// $(this).next().css({"display":"block","color":"red"}).html("用户名不能为空!");
+				return zNeg;
+			}
+        })
+        var zPeg;
+        $("#password").blur(function() {
+            zPeg = /[A-Za-z]$/;
+            console.log(zPeg)
+            if($(this).val() == "") {
+				$(this).attr('placeholder','密码不能为空!');
+				$('.infoTextarea').addClass('infoTextarea change');
+				return;
+			}
+        })
+        $("#phone").blur(function() {
+            zPeg = /^[1][3,4,5,7,8][0-9]{9}$/;
+            if($(this).val() == "") {
+				$(this).attr('placeholder','电话号码不能为空!');
+				$('.infoTextarea').addClass('infoTextarea change');
+				return;
+			}
+        })
+        $("#ID").blur(function() {
+            zPeg = /^[1][3,4,5,7,8][0-9]{9}$/;
+            if($(this).val() == "") {
+				$(this).attr('placeholder','身份证号码不能为空!');
+				$('.infoTextarea').addClass('infoTextarea change');
+				return;
+			}
+        })
+        $("#email").blur(function() {
+            zPeg = /^[1][3,4,5,7,8][0-9]{9}$/;
+            if($(this).val() == "") {
+				$(this).attr('placeholder','email不能为空!');
+				$('.infoTextarea').addClass('infoTextarea change');
+				return zPeg;
+			}
+        })
+        post.click(function () {
+            // var ar = function () {
+                $.ajax({
+                    type: "post",
+                    data: {
+                        username:$("#terge").val(),
+                        password: $("#password").val(),
+                        phone: $("#phone").val(),
+                        userID: $("#ID").val(),
+                        email: $("#email").val()
+                    },
+                    url: "http://192.168.1.103:3000/users/register",
+                    success: function (data) {
+                        console.log(data);
+                        if (data.state==0) {
+                            location.href="denlu.html"  
+                        }
+                    }
+                })
+            // }
+        })
+        // var callback = { "username": "huwei", "password": "9257" };
+        //                 $.post("http://192.168.1.103:3000/users/register", callback, function (obj) {
+                            
+        //     }, "json");
+    </script>
+    <!-- <script>
+        var ar = function () {
+            $.ajax({
+                type: "post",
+                data: {
+                    username: "huwei",
+                    password: "9527",
+                    phone: "13369112949",
+                    userID: "hw",
+                    email: "1457328087@qq.com"
+                },
+                url: "http://192.168.1.122:3000/users/register",
+                success: function (data) {
+                    console.log(data);
+                }
+            })
+        }
+        var callback = { "username": "huwei", "password": "9527", "phone": "13369112949", "email": "1457328087@qq.com" };
+        //  console.log(callback)
+        $.post("http://192.168.1.122:3000/users/register", callback, function (data) {
+            console.log(data);
+        }, "json");
+    </script> -->
+</body>
+
+</html>
